@@ -22,6 +22,7 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 
 	err := col.FindOne(ctx, condicion).Decode(&resultado)
 	ID := resultado.ID.Hex()
+	println("ya existe usuario ID: " + ID)
 
 	if err != nil {
 		return resultado, false, ID
