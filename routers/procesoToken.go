@@ -35,8 +35,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 		if encontrado == true {
 			Email = claims.Email
 			IDUsuario = claims.ID.Hex()
-			println("se guarda id de usuario" + IDUsuario)
-			println("se guarda EMAIL usuario" + Email)
+			println("Usuario login : " + IDUsuario)
 		}
 		return claims, encontrado, IDUsuario, nil
 	}
