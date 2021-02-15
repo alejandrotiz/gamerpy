@@ -8,6 +8,7 @@ import (
 	"github.com/alejandrotiz/gamerpy/models"
 )
 
+/*ConsultaRelacion consulta la relacion ente 2 usuarios*/
 func ConsultaRelacion(w http.ResponseWriter, r *http.Request) {
 	ID := r.URL.Query().Get("id")
 	if len(ID) < 1 {
